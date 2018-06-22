@@ -1,0 +1,16 @@
+﻿Справочное руководство.
+-------------------------------------------------------------------------------------------------------------------------------
+MSDN(libriary) - библиотека официальной технической документации для разработчиков под OS MSWindows.
+https://msdn.microsoft.com/ru-ru/library   -   подгруппа "Средства и языки разработки", ссылка - JavaScript language reference
+https://msdn.microsoft.com/ru-ru/library/d1et7k7c(v=vs.94).aspx
+
+-----------------------------------------------------------------------------------
+
+MDN(Mozilla Developer Network) - официальный сайт Мозилла, по разработке документации стандартов веба и проектов Мозилла.
+https://developer.mozilla.org/ru/
+https://developer.mozilla.org/ru/docs/Web/JavaScript
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_JavaScript
+
+
+
+
