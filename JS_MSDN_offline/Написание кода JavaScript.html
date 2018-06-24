@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://msdn.microsoft.com/ru-ru/library/cte3c772(v=vs.94).aspx -->
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="WT.seg_1" content="ru-ru"><link rel="canonical" href="https://msdn.microsoft.com/ru-ru/library/cte3c772(v=vs.94).aspx">
+    <title>Написание кода JavaScript</title>
+
+
+
+
+
+
+<meta name="DCS.dcsuri" content="/ru-ru/library/cte3c772(d=default,l=ru-ru,v=vs.94).aspx">
+
+<meta name="NormalizedUrl" content="https://msdn.microsoft.com/ru-ru/library/cte3c772(d=default,l=ru-ru,v=vs.94).aspx">
+
+<meta name="ms.normalizedurl" content="https://msdn.microsoft.com/ru-ru/library/cte3c772(d=default,l=ru-ru,v=vs.94).aspx">
+
+<meta name="ms.prod" content="windows-client-threshold">
+
+<meta name="ms.devlang" content="javascript">
+
+<meta name="ms.topic" content="article">
+
+<meta name="VotingContextUrl" content="https://msdn.microsoft.com/ru-ru/library/cte3c772(d=default,l=ru-ru,v=vs.94).aspx">
+
+<meta name="MN" content="61C41DD6-8:57:55 PM">
+
+<meta name="Search.ShortId" content="cte3c772">
+
+<meta name="ms.shortidmsdn" content="cte3c772">
+
+<meta name="ms.locale" content="ru-ru">
+
+<meta name="ms.prodver" content="VS.94">
+
+<meta name="ms.contentlang" content="RU">
+
+<meta name="ms.lang" content="RU">
+
+<meta name="ms.loc" content="RU">
+
+<meta name="ms.sitever" content="2018.05.23.1">
+
+<meta name="ms.assetid" content="dde28266-0d0f-4460-a819-f931cf0911ad">
+
+<meta name="ms.auth" content="0">
+
+<meta name="ms.technology" content="devlang-javascript">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+        
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="./Написание кода JavaScript_files/ai.0.js.download" async=""></script><script type="text/javascript" data-do-not-move="true">
+        //<![CDATA[
+        var AmbientContext = null;
+
+        (function(){
+            var root = (function(){return this;}).call(null);
+
+            var GetCookie = function(name){
+                var cookies = root.document.cookie ? root.document.cookie.split('; ') : [];
+                for (var i = 0; i < cookies.length; i++) {
+                    var pos = cookies[i].indexOf('=');
+                    if (name === root.decodeURIComponent(cookies[i].slice(0, pos)))
+                    {
+                        var cookie = cookies[i].slice(pos + 1).replace(/\+/g, ' ');
+                        cookie = root.decodeURIComponent(cookie);
+                        return cookie;
+                    }
+                }
+            };
+
+            var JsonDeserialize = function(content) {
+                return root.JSON && root.JSON.parse ? root.JSON.parse(content) : (new Function('return (' + content + ')'))();
+            };
+
+            try {
+                AmbientContext = GetCookie('AmbientContext');
+                AmbientContext = AmbientContext && JsonDeserialize(AmbientContext);
+            } catch(ex) {
+            } finally {
+                AmbientContext = AmbientContext || null;
+            }
+        })();
+        //]]>
+    </script>
+
+    <script type="text/javascript" src="./Написание кода JavaScript_files/jquery-1.9.1.min.js.download" data-do-not-move="true" data-provides="jQuery"></script>
+    
+<link rel="stylesheet" type="text/css" href="./Написание кода JavaScript_files/mscc-0.4.0.min.css"><link rel="stylesheet" type="text/css" href="./Написание кода JavaScript_files/Combined.css"><script class="mtps-injected">try {
+/**/
+(window.MTPS || (window.MTPS = {})).cdnDomains || (window.MTPS.cdnDomains = { 
+	"image": "https://i-msdn.sec.s-msft.com", 
+	"js": "https://i2-msdn.sec.s-msft.com", 
+	"css": "https://i-msdn.sec.s-msft.com", 
+	"ttf": "https://i-msdn.sec.s-msft.com"
+});
+/**/
+} finally { MTPS._injectNextScript_0 && MTPS._injectNextScript_0(); }</script><script class="mtps-injected">try {
+//
+
+        window.appInsightsId = '5eb1b2eb-c47a-497a-a7ac-a1c230b2882f';
+        //
+} finally { MTPS._injectNextScript_1 && MTPS._injectNextScript_1(); }</script><script class="mtps-injected" src="./Написание кода JavaScript_files/Combined.js.download"></script><link href="./Написание кода JavaScript_files/PrintView.css" rel="stylesheet" type="text/css" media="print"><script type="text/javascript" src="./Написание кода JavaScript_files/jsll-4.2.1.js.download"></script><script class="mtps-injected" src="./Написание кода JavaScript_files/mscc-0.4.0.min.js.download"></script><script class="mtps-injected" src="./Написание кода JavaScript_files/SearchBox.js.download"></script><script class="mtps-injected" src="./Написание кода JavaScript_files/SearchBox.jss"></script><script class="mtps-injected" src="./Написание кода JavaScript_files/Combined.js(1).download"></script><script class="mtps-injected">try {
+//
+    MTPS = window.MTPS || {};
+    MTPS.Translation = window.MTPS.Translation || {};
+
+    MTPS.Translation.TranslationType =  0;
+    
+    
+        
+        MTPS.Translation.EditorLink = {
+            includeEditor : 0,
+            editLink: "https://msdn.microsoft.com/ru-ru/library/translation/edit/cte3c772(v=vs.94).aspx",
+            editLinkText: "Предложите более удачный вариант перевода"
+        };
+        
+    //
+} finally { MTPS._injectNextScript_7 && MTPS._injectNextScript_7(); }</script><script class="mtps-injected" src="./Написание кода JavaScript_files/Combined.js(2).download"></script><script class="mtps-injected">try {
+MTPS = window.MTPS || {}; MTPS.LocalizedStrings = window.MTPS.LocalizedStrings || {}; MTPS.LocalizedStrings.ExpandButtonTooltip = 'Развернуть'; MTPS.LocalizedStrings.CollapseButtonTooltip = 'Свернуть'; MTPS.LocalizedStrings.EnhancedExpandTooltip = 'Щелкните, чтобы развернуть. Щелкните дважды, чтобы развернуть все.'; MTPS.LocalizedStrings.EnhancedCollapseTooltip = 'Щелкните, чтобы свернуть. Щелкните дважды, чтобы свернуть все.'; MTPS.LocalizedStrings.ExpandAllButtonTooltip = 'Развернуть все'; MTPS.LocalizedStrings.CollapseAllButtonTooltip = 'Свернуть все';
+} finally { MTPS._injectNextScript_9 && MTPS._injectNextScript_9(); }</script><script class="mtps-injected" src="./Написание кода JavaScript_files/Combined.js(3).download"></script><script src="./Написание кода JavaScript_files/broker.js.download"></script><script class="mtps-injected">try {
+$(document).ready(function() {
+        try {
+            var token = $("#globalRequestVerification input[name='__RequestVerificationToken']").clone();
+            $("#siteFeedbackForm").append(token);
+        } catch(err) {
+            
+        }
+    });
+} finally { MTPS._injectNextScript_11 && MTPS._injectNextScript_11(); }</script></head>
+<body class="library Chrome">
+    <div id="page">
+
+        
+
+        
+    
+
+
+    
+    <link type="text/css" rel="stylesheet">
+    
+        
+        
+    <input type="hidden" id="isHeaderBleeding" value="true">
+    <div id="ux-header" dir="ltr" class="ltr msdn" ms.pgarea="header" data-device-type="desktop">
+        
+            
+            
+        <div id="ux-banner">
+            <div id="msccBanner" dir="ltr" data-site-name="msdn.microsoft.com" data-mscc-version="0.4.0" data-nver="aspnet-3.0.0" data-sver="0.1.2" class="cc-banner" role="alert"><div class="cc-container"><svg class="cc-icon cc-v-center" x="0px" y="0px" viewBox="0 0 44 44" height="30px" fill="none" stroke="currentColor"><circle cx="22" cy="22" r="20" stroke-width="2"></circle><line x1="22" x2="22" y1="18" y2="33" stroke-width="3"></line><line x1="22" x2="22" y1="12" y2="15" stroke-width="3"></line></svg> <span class="cc-v-center cc-text">Этот сайт использует файлы cookie для аналитики, персонализированного контента и рекламы. Продолжая просмотр этого сайта, вы соглашаетесь с этими условиями использования.</span> <a href="https://go.microsoft.com/fwlink/?linkid=845480" aria-label="Узнайте больше о политике Microsoft в отношении файлов cookie" id="msccLearnMore" class="cc-link cc-v-center cc-float-right" data-mscc-ic="false">Узнайте больше</a></div></div>
+        </div>
+
+      <header ms.pgarea="header">
+        <span id="singleCol"></span>
+        <span id="doubleCol"></span>
+        <span id="isMobile"></span>
+        <div>
+          <div class="row topRow" role="banner">
+            <div class="top">
+              <div class="left">
+                <a class="msdnLogoImg" href="https://msdn.microsoft.com/ru-ru" title="MSDN home" ms.cmpgrp="mslogo">
+                  <div class="clip70x15">
+                    <img alt="Microsoft Logo" id="msft-logo" class="msft-logo" src="./Написание кода JavaScript_files/HeaderFooterSprite.png">
+                  </div>
+                </a>
+                <div class="GrayPipeDiv clip1x18">
+                  <img alt="Gray Pipe" class="GrayPipe" src="./Написание кода JavaScript_files/HeaderFooterSprite.png">
+                </div>
+                  <a class="DevCenterFullNameNonMegaBlade" href="https://msdn.microsoft.com/ru-ru">Developer Network</a>
+                <a class="DevCenterFullName" href="https://msdn.microsoft.com/ru-ru">Developer Network</a>
+                <a class="DevCenterShortName" href="https://msdn.microsoft.com/ru-ru">Developer</a>
+              </div>
+              <div class="right" ms.cmpgrp="aux nav">
+                <div class="auxNav">
+                  <div>
+                    <div data-fragmentname="Subscriptions" id="Fragment_Subscriptions" xmlns="http://www.w3.org/1999/xhtml">
+  <a href="https://msdn.microsoft.com/subscriptions/manage/hh442900" id="Subscriptions_2153_1" xmlns="http://www.w3.org/1999/xhtml">
+    <span style="line-height:18px;" xmlns="">Подписки MSDN</span>
+  </a>
+</div>
+                    <div data-fragmentname="GetTools" id="Fragment_GetTools" xmlns="http://www.w3.org/1999/xhtml">
+  <a href="https://go.microsoft.com/fwlink/?LinkId=309297&amp;clcid=0x419&amp;slcid=0x419&amp;campaign=o~msft~msdn~gettools-header~dn308572" id="GetTools_2153_3" xmlns="http://www.w3.org/1999/xhtml">
+    <span style="line-height:18px;" xmlns="">Получить инструменты</span>
+  </a>
+</div>
+                  </div>
+                        <div>
+                            
+                        </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="row middleRow">
+            <div class="expandTop" style="display: none;">
+              <div class="left"></div>
+              <div class="right"></div>
+            </div>
+          </div>
+        </div>
+        <div id="buttomRowWrapper" class="bg_default">
+          <div class="row buttomRow bg_default">
+            <div class="bottom">
+              <div class="left" role="navigation" aria-label="header toc" ms.cmpgrp="main nav">
+                <a id="grip" class="menu-icon" href="javascript:void(0)" role="button" aria-label="navigation menu" data-mscc-ic="false"></a>
+                
+                <div id="drawer">
+                  <div class="toc">
+                    
+        <nav>
+            <ul class="navL1" ms.cmpgrp="main nav">
+                        <li class="inactive toggle">
+                                <a href="javascript:void(0)" role="button" aria-expanded="false" data-mscc-ic="false">Загрузки</a>
+                                <ul class="navL2" style="display: none;">
+                                        <li class="inactive">
+
+                                                <a href="https://www.visualstudio.com/ru/downloads/" role="link" title="Visual Studio">Visual Studio</a>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="https://msdn.microsoft.com/microsoft-sdks-msdn" role="link" title="Пакеты SDK">Пакеты SDK</a>
+                                        </li>
+                                        <li class="inactive toggle">
+
+                                                <a href="javascript:void(0)" title="Пробные версии программ" role="button" aria-expanded="false" data-mscc-ic="false">Пробные версии программ</a>
+                                                <ul class="navL3" style="display: none;">
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/evalcenter" title="Бесплатное скачивание" role="link">Бесплатное скачивание</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/officeevaluationresources" title="Ресурсы Office" role="link">Ресурсы Office</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/sharepoint2013resources" title="Ресурсы Microsoft SharePoint Server 2013" role="link">Ресурсы Microsoft SharePoint Server 2013</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/sqlserver2014expressresources" title="Ресурсы Microsoft SQL Server 2014 Express" role="link">Ресурсы Microsoft SQL Server 2014 Express</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/windowsserver2012r2resources" title="Материалы Windows Server 2012 R2" role="link">Материалы Windows Server 2012 R2</a>
+                                                        </li>
+                                                </ul>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="inactive toggle">
+                                <a href="javascript:void(0)" role="button" aria-expanded="false" data-mscc-ic="false">Программы</a>
+                                <ul class="navL2" style="display: none;">
+                                        <li class="inactive">
+
+                                                <a href="https://msdn.microsoft.com/msdn-subscriptions-administration" role="link" title="Подписки администраторам">Подписки администраторам</a>
+                                        </li>
+                                        <li class="inactive toggle">
+
+                                                <a href="javascript:void(0)" title="Студентам" role="button" aria-expanded="false" data-mscc-ic="false">Студентам</a>
+                                                <ul class="navL3" style="display: none;">
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/imagine/imagine-home" title="Microsoft Imagine" role="link">Microsoft Imagine</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/microsoftstudentpartners" title="Программа Microsoft Student Partners" role="link">Программа Microsoft Student Partners</a>
+                                                        </li>
+                                                </ul>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="https://www.microsoft.com/ru-ru/isvs" role="link" title="ISV">ISV</a>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="https://www.microsoft.com/ru-ru/ms-start" role="link" title="Стартапам">Стартапам</a>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="https://events.microsoft.com/" role="link" title="Мероприятия">Мероприятия</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="inactive toggle">
+                                <a href="javascript:void(0)" role="button" aria-expanded="false" data-mscc-ic="false">Сообщество</a>
+                                <ul class="navL2" style="display: none;">
+                                        <li class="inactive">
+
+                                                <a href="https://msdn.microsoft.com/magazine/dd767791" role="link" title="Журнал MSDN">Журнал MSDN</a>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="https://social.msdn.microsoft.com/forums/" role="link" title="Форумы">Форумы</a>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="https://blogs.msdn.microsoft.com/rudevnews/" role="link" title="Блог">Блог</a>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="http://channel9.msdn.com/" role="link" title="Канал Channel 9">Канал Channel 9</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="inactive current toggle">
+                                <a href="javascript:void(0)" role="button" aria-expanded="false" data-mscc-ic="false">Документация</a>
+                                <ul class="navL2" style="display: none;">
+                                        <li class="inactive current">
+
+                                                <a href="https://msdn.microsoft.com/library" role="link" title="API и справочники">API и справочники</a>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="https://msdn.microsoft.com/developer-centers-msdn" role="link" title="Центры разработки">Центры разработки</a>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="https://code.msdn.microsoft.com/" role="link" title="Примеры кода">Примеры кода</a>
+                                        </li>
+                                        <li class="inactive">
+
+                                                <a href="https://msdn.microsoft.com/mt703209" role="link" title="Более не поддерживаемое содержимое">Более не поддерживаемое содержимое</a>
+                                        </li>
+                                </ul>
+                        </li>
+            </ul>
+        </nav>
+
+                  </div>
+                </div>
+              </div>
+              <div class="right" ms.title="search" role="search">
+                <div data-fragmentname="SearchBox" id="Fragment_SearchBox" xmlns="http://www.w3.org/1999/xhtml">
+  <div class="SearchBox">
+    <form id="HeaderSearchForm" name="HeaderSearchForm" method="get">
+      <button id="FakeHeaderSearchButton" value="Search" type="submit" class="header-search-button" role="button" aria-label="search finder">
+        <div id="search-finder-div" class="clip16x20">
+          <img alt="search finder" id="search-finder" class="search-finder" src="./Написание кода JavaScript_files/HeaderFooterSprite.png">
+        </div>
+      </button>
+      <button id="HeaderSearchButton" style="display:none" data-searchtype="icon" data-pgarea="header" title="Поиск в MSDN"></button>
+      <div id="searchSplitter"></div>
+      <div id="searchCloseIconDiv" class="clip16x20" tabindex="0">
+        <img alt="search clear" id="searchCloseIcon" class="search-clear-x" src="./Написание кода JavaScript_files/HeaderFooterSprite.png">
+      </div>
+      <div id="searchTextContainer" style="width: 0px; display: none;"><p role="alert" style="height: 1px;width: 1px;overflow: hidden;position: absolute;"></p>
+        <input id="HeaderSearchTextBox" name="query" type="text" aria-label="Search Input Box" maxlength="200" onfocus="Epx.Controls.SearchBox.watermarkFocus(event, this.title)" onblur="Epx.Controls.SearchBox.watermarkBlur(event, this.title)" autocomplete="off" data-searchtype="searchbox" role="combobox" aria-autocomplete="both" aria-owns="MSDNSearchAutoCompleteList" aria-live="polite" placeholder="" data-pgarea="header">
+      <div id="SearchFlyoutContainer" style="display: none; text-align: left; border: 1px solid buttonshadow; position: absolute; z-index: 1000; padding: 2px; background-color: rgb(255, 255, 255); color: rgb(255, 255, 255); font-family: Arial; font-size: 16px;"><div id="SuggestionContainer"><ul data-pgarea="header" data-searchtype="search dropdown" id="MSDNSearchAutoCompleteList" role="listbox" aria-controls="HeaderSearchTextBox" style="list-style: none; padding: 4px 2px 0px 1px; cursor: pointer; margin: 1px; white-space: nowrap;"></ul></div></div></div>
+    </form>
+    
+    
+  </div>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </header>
+
+    <div id="overlayMaskHeader"></div></div>
+
+    
+    
+    
+    <div id="jumpInfo" style="display: none">Приносим извинения. Запрошенное содержимое было удалено. Вы будете автоматически перенаправлены через 1 секунду.</div>
+
+
+
+
+
+<link type="text/css" rel="stylesheet">
+<link type="text/css" rel="stylesheet">
+
+
+    <div id="breadcrumbs" ms.pgarea="body" ms.cmpgrp="breadcrumbs">
+        <div id="breadcrumbDesktop" class="breadCrumb">
+                        <span class="breadcrumbEllipsis"><a href="https://msdn.microsoft.com/ru-ru/library/aa155073.aspx" title="Веб-разработки"></a></span>
+                        <span><a href="https://msdn.microsoft.com/ru-ru/library/aa155110.aspx" title="JavaScript"><span>JavaScript</span></a></span>
+                        <span><a href="https://msdn.microsoft.com/ru-ru/library/d1et7k7c(v=vs.94).aspx" title="Справочник по языку JavaScript"><span>Справочник по языку JavaScript</span></a></span>
+                        <span class="breadcrumbDropSmall">
+                            <a id="breadcrumbDropDownButton" href="https://msdn.microsoft.com/ru-ru/library/cte3c772(v=vs.94).aspx#" targethref="https://msdn.microsoft.com/ru-ru/library/d1et7k7c(v=vs.94).aspx" title="Основы JavaScript" role="button" aria-expanded="false"><span>Основы JavaScript</span></a>
+                        </span>
+        </div>
+        <div id="breadcrumbDropDownMenu" style="display: none;"></div>
+
+        <div id="breadcrumbTablet" class="breadCrumb">
+                        <span class="breadcrumbEllipsis"><a href="https://msdn.microsoft.com/ru-ru/library/d1et7k7c(v=vs.94).aspx" title="Справочник по языку JavaScript"></a></span>
+                    <span><a href="https://msdn.microsoft.com/ru-ru/library/6974wx4d(v=vs.94).aspx" title="Основы JavaScript"><span>Основы JavaScript</span></a></span>
+                <span class="breadcrumbDropSmall"><a id="tocDropDownButton" href="https://msdn.microsoft.com/ru-ru/library/cte3c772(v=vs.94).aspx#" title="Написание кода JavaScript" role="button" aria-expanded="false"><span>Написание кода JavaScript</span></a></span>
+        <div id="navigationButtons">
+            <a id="isd_print" href="https://msdn.microsoft.com/ru-ru/library/cte3c772(d=printer,v=vs.94).aspx" rel="nofollow"><ins class="print"></ins>Печать </a>
+            <a id="isd_printABook" href="https://msdn.microsoft.com/ru-ru/library/export/help/?returnurl=%2fru-ru%2flibrary%2fcte3c772(v%3dvs.94).aspx">
+                <ins class="export"></ins>Экспорт (<span class="count">0</span>)
+            </a>
+        </div></div>
+        <div id="tocDropDownMenu" style="display: none;"></div>
+        <div id="breadcrumbMobile" class="breadCrumb">
+                <span class="breadcrumbEllipsis"><a href="https://msdn.microsoft.com/ru-ru/library/6974wx4d(v=vs.94).aspx" title="Основы JavaScript"></a></span>
+            <span class="breadcrumbDropSmall"><a id="tocPopupButton" href="https://msdn.microsoft.com/ru-ru/library/cte3c772(v=vs.94).aspx#" title="Написание кода JavaScript" role="button" aria-expanded="false"><span>Написание кода JavaScript</span></a></span>
+        <div id="navigationButtons">
+            <a id="isd_print" href="https://msdn.microsoft.com/ru-ru/library/cte3c772(d=printer,v=vs.94).aspx" rel="nofollow"><ins class="print"></ins>Печать </a>
+            <a id="isd_printABook" href="https://msdn.microsoft.com/ru-ru/library/export/help/?returnurl=%2fru-ru%2flibrary%2fcte3c772(v%3dvs.94).aspx">
+                <ins class="export"></ins>Экспорт (<span class="count">0</span>)
+            </a>
+        </div></div>
+    </div>
+    <div id="tocPopupMenu" style="display: none;">
+        <div id="tocPopMenuClose" class="tocCloseLarge" role="button" aria-label="Close Popup Menu" tabindex="0"></div>
+        <div id="tocTitle">Написание кода JavaScript</div>        
+    </div>
+
+    
+
+
+        <div id="body" ms.pgarea="body" class="">
+            <span id="tabletView_large"></span>
+            <span id="tabletView_small"></span>
+            <span id="mobileView"></span>
+            
+
+
+
+
+
+
+
+
+
+    <div id="leftNav" ms.cmpgrp="left toc" role="navigation" aria-label="left toc" style="height: auto;">
+
+    
+
+
+<div id="tocnav" class="ArchiveV2">
+    <div class="tocunselected">
+        <div id="tocExpandArea">
+            <span class="toc_empty"></span>
+            <span id="tocExpandButton"><a href="javascript:void(0)" aria-label="expand sibling toc" role="button"></a></span>
+        </div>
+        <div id="tocExpand"></div>
+    </div>
+    <div class="tocselected"><div class="toclevel current" data-toclevel="1">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/ru-ru/library/cte3c772(v=vs.94).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Написание кода JavaScript">Написание кода JavaScript</a>                </div><div class="tocPadding"></div></div>
+    <div class="tocunselected">
+                
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/ru-ru/library/67defydd(v=vs.94).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Переменные (JavaScript)">Переменные (JavaScript)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/ru-ru/library/7wkd9z69(v=vs.94).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Типы данных (JavaScript)">Типы данных (JavaScript)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/ru-ru/library/6hsc0eak(v=vs.94).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Операторы (JavaScript)">Операторы (JavaScript)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/ru-ru/library/z3ks45k7(v=vs.94).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Приоритет операторов (JavaScript)">Приоритет операторов (JavaScript)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/ru-ru/library/kw1tezhk(v=vs.94).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Управление выполнением программы (JavaScript)">Управление выполнением программы (JavaScript)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/ru-ru/library/yh6c50h7(v=vs.94).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Функции (JavaScript)">Функции (JavaScript)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/ru-ru/library/89t1khd2(v=vs.94).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Объекты и массивы (JavaScript)">Объекты и массивы (JavaScript)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/ru-ru/library/4zx5dkc9(v=vs.94).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Встроенные объекты (JavaScript)">Встроенные объекты (JavaScript)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/ru-ru/library/202863ha(v=vs.94).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Создание объектов (JavaScript)">Создание объектов (JavaScript)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/ru-ru/library/ee532932(v=vs.94).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Вычисление даты и времени (JavaScript)">Вычисление даты и времени (JavaScript)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/ru-ru/library/ff743760(v=vs.94).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Строки даты и времени (JavaScript)">Строки даты и времени (JavaScript)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/ru-ru/library/yfc4b32c(v=vs.94).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Отображение текста на веб-странице (JavaScript)">Отображение текста на веб-странице (JavaScript)</a>                </div>
+    </div>
+    <a id="tocMenuToggler" href="javascript:void(0)" role="button">
+        <span id="tocMenuTogglerIcon" class="tocMenuCollapse" role="button" aria-expanded="true" aria-label="Table of contents menu"></span>
+        <div id="tocMenuTogglerLabel">TOC</div>
+    </a>
+</div>            <div style="display:none">
+                <div id="CollapseLocalizeString">Свернуть оглавление</div>
+                <div id="ExpandLocalizeString">Развернуть оглавление</div>
+            </div>
+        <div>
+            <a id="isd_archiveControlResponsive" style="display:none;" href="javascript:void(0)" role="button" aria-label="Скрыть архивные версии" data-include-archive="Показать архивные версии" data-exclude-archive="Скрыть архивные версии">
+            </a>
+            <div id="isd_archiveInstrument" style="display:none">Эта документация перемещена в архив и не поддерживается.</div>
+        </div>
+    </div>
+     <div id="content" class="content" ms.cmpgrp="content body" role="main">
+
+
+
+<div id="MTPSTranslator" class="MTPSTranslator">
+    <table class="MTPSTranslatorTable" style="width: 100%">
+        <tbody><tr>
+            <td class="TranslationAlertBox">
+                <div>Чтобы прочитать статью на английском языке, установите флажок Английский. Вы также можете просматривать текст на английском языке во всплывающем окне, наводя указатель мыши на текст.</div>
+            </td>
+                <td class="TranslationViewSwitcher">
+                    <div>
+                        <input title="Показать перевод" value="0" name="TrnaslatorView" type="radio" class="translatechoice" checked="checked"><span>Перевод</span>
+                    </div>
+                    <div>
+                        <input title="Показать текст на английском языке" value="1" name="TrnaslatorView" type="radio" class="translatechoice"><span>Английский</span>
+                    </div>
+                </td>
+        </tr>
+    </tbody></table>
+</div>
+    
+    
+    
+     
+
+
+
+
+
+
+
+    <div id="archiveDisclaimerText" style="display:none">Эта документация перемещена в архив и не поддерживается.</div>
+
+
+
+<div xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="topic">
+    <h1 class="title">Написание кода JavaScript</h1>
+    <div id="mainSection">
+      <div id="mainBody">&nbsp;<div class="introduction"><p><span id="mt1" class="sentence" data-guid="8703bc1e24eff86f24f7e88c53d92706" data-source="Like many other programming languages, JavaScript is organized into statements, blocks consisting of related sets of statements, and comments." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Как и во многих других языках программирования, код JavaScript состоит из операторов, блоков, содержащих связанные наборы операторов, и комментариев.</sentencetext></span>&nbsp;&nbsp;<span id="mt2" class="sentence" data-guid="ab6db454f611e577b117d92e15e07e30" data-source="Within a statement you can use variables, strings, numbers, and expressions." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">В операторах можно использовать переменные, строки, числа и выражения.</sentencetext></span>&nbsp;&nbsp;</p></div><div><h2 class="LW_CollapsibleArea_TitleDiv"><div><a class="LW_CollapsibleArea_TitleAhref" title="" role="heading"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Операторы</span></a><div id="Anchor_0" class="LW_CollapsibleArea_Anchor_Div active"><a href="https://msdn.microsoft.com/ru-ru/library/cte3c772(v=vs.94).aspx#Anchor_0" class="LW_CollapsibleArea_Anchor_Img" title="Щелкните правой кнопкой мыши, чтобы скопировать ссылку на этот раздел и поделиться ей"></a></div><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr"></div></div></h2><div class="sectionblock"><div class="section"><p><span id="mt4" class="sentence" data-guid="27ea30e2579339af3f36fc25074a5836" data-source="A JavaScript program is a collection of statements." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Программа на JavaScript представляет собой коллекцию операторов.</sentencetext></span>&nbsp;&nbsp;<span id="mt5" class="sentence" data-guid="89b4658e145e3b66719bd4318b7a7ac3" data-source="JavaScript statements combine expressions in such a way that they carry out one complete task." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Операторы JavaScript объединяют выражения таким образом, чтобы они выполняли одну общую задачу.</sentencetext></span>&nbsp;&nbsp;</p><p><span id="mt6" class="sentence" data-guid="ce8636c1e7ee13abb6e6228610b5ff0c" data-source="A statement consists of one or more expressions, keywords, or operators (symbols)." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Оператор состоит из одного или нескольких выражений, ключевых слов или операторов (символов).</sentencetext></span>&nbsp;&nbsp;<span id="mt7" class="sentence" data-guid="62ca6cc9b4849c9569bebadded2f92fa" data-source="Typically, a statement is written on a single line, although a statement can be written over two or more lines." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Обычно оператор записывается на одной строке, хотя оператор может быть записан и над двух или более строках.</sentencetext></span>&nbsp;&nbsp;<span id="mt8" class="sentence" data-guid="d33d2a7300690c8f766f6fb5a5aaa402" data-source="Also, two or more statements can be written on the same line by separating them with semicolons." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Кроме того, два и более операторов можно записать на одной строке, разделяя их точкой с запятой.</sentencetext></span>&nbsp;&nbsp;<span id="mt9" class="sentence" data-guid="a03b9f882344a2ebd16fceb6b77bd204" data-source="In general, each new line begins a new statement." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Обычно каждая новая строка начинает новый оператор.</sentencetext></span>&nbsp;&nbsp;<span id="mt10" class="sentence" data-guid="64ea70515f7ca32ab1829f6829c11f57" data-source="It is a good idea to terminate your statements explicitly." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Рекомендуется завершать операторы явным образом.</sentencetext></span>&nbsp;&nbsp;<span id="mt11" class="sentence" data-guid="ee15736102ee37d4e3c02de676a07a57" data-source="You do this with the semicolon (;), which is the JavaScript statement termination character." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Для этого используется точка с запятой (;), являющаяся символом завершения операторов JavaScript.</sentencetext></span>&nbsp;&nbsp;</p><p><span id="mt12" class="sentence" data-guid="4481d25f53e1ada7c2c43a4eae4c1050" data-source="Here are two examples of JavaScript statements." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Далее показаны два примера операторов JavaScript.</sentencetext></span>&nbsp;&nbsp;<span id="mt13" class="sentence" data-guid="2dbaf1f1896a3b6c02f284e807d5dc6d" data-source="The sentences after the // characters are &lt;em&gt;comments&lt;/em&gt;, which are explanatory remarks in the program." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Текст после символов // представляет собой <em xmlns="http://www.w3.org/1999/xhtml">комментарии</em>, служащие для пояснения программы.</sentencetext></span>&nbsp;&nbsp;</p>
+<div id="code-snippet-1" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>JavaScript</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Копировать в буфер обмена." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode(&#39;CodeSnippetContainerCode_f7c476a6-3a79-404f-b0b6-388312b8626c&#39;);" ms.cmptyp="CodeSnippet">Копировать</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_f7c476a6-3a79-404f-b0b6-388312b8626c" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre><span style="color:Blue;">var</span> aBird = <span style="color:#A31515;">"Robin"</span>; <span style="color:Green;">// Assign the text "Robin" to the variable aBird.</span>
+<span style="color:Blue;">var</span> today = <span style="color:Blue;">new</span> Date(); <span style="color:Green;">// Assign today's date to the variable today.</span>
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+<p><span id="mt14" class="sentence" data-guid="e5e83e91f45f9807db1a93ff9edf6901" data-source="A group of JavaScript statements surrounded by braces ({}) is called a &lt;em&gt;block&lt;/em&gt;." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Группа операторов JavaScript, заключенных в фигурные скобки ({}), называется <em xmlns="http://www.w3.org/1999/xhtml">блоком</em>.</sentencetext></span>&nbsp;&nbsp;<span id="mt15" class="sentence" data-guid="b2806648d76f12756d8f2b4fdf03ac3f" data-source="Statements grouped into a block can generally be treated as a single statement." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">В общем, операторы, объединенные в блок, можно рассматривать как один оператор.</sentencetext></span>&nbsp;&nbsp;<span id="mt16" class="sentence" data-guid="624000bdea0f47d0ca5b8031d4fc569e" data-source="This means you can use blocks in most places that JavaScript expects a single statement." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Это означает, что блоки можно использовать в любых местах, где JavaScript требует одного оператора.</sentencetext></span>&nbsp;&nbsp;<span id="mt17" class="sentence" data-guid="2b4780999460074752fae17fd7854102" data-source="Notable exceptions include the headers of &lt;strong&gt;for&lt;/strong&gt; and &lt;strong&gt;while&lt;/strong&gt; loops." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">В качестве известных исключений можно привести заголовки циклов <strong xmlns="http://www.w3.org/1999/xhtml">for</strong> и <strong xmlns="http://www.w3.org/1999/xhtml">while</strong>.</sentencetext></span>&nbsp;&nbsp;<span id="mt18" class="sentence" data-guid="e08cfa742850568b7f71030443830e14" data-source="Notice that the single statements within a block end in semicolons, but the block itself does not." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Следует отметить, что отдельные операторы в блоке заканчиваются точкой с запятой, но сам блок&nbsp;— нет.</sentencetext></span>&nbsp;&nbsp;</p><p><span id="mt19" class="sentence" data-guid="8f7eeac7648cb644001fa67e3c962a13" data-source="Generally, blocks are used in functions and conditionals." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Как правило, блоки используются в функциях и условных выражениях.</sentencetext></span>&nbsp;&nbsp;<span id="mt20" class="sentence" data-guid="b1af2aa732e55983fbcdeeb029c2c6df" data-source="Notice that unlike C++ and some other languages, JavaScript does not consider a block to be a new scope; only functions create a new scope." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Следует помнить, что в отличие от C++ и некоторых других языков, блок в JavaScript не считается новой областью; новую область создают только функции.</sentencetext></span>&nbsp;&nbsp;</p><p><span id="mt21" class="sentence" data-guid="f9f6bca04170c3893f1307674c82da7b" data-source="In the following example, the &lt;strong&gt;else&lt;/strong&gt; clause contains a block of two statements surrounded by braces." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">В следующем примере предложение <strong xmlns="http://www.w3.org/1999/xhtml">else</strong> содержит блок из двух операторов, заключенных в фигурные скобки.</sentencetext></span>&nbsp;&nbsp;<span id="mt22" class="sentence" data-guid="2a0749d8454c127f76478413809a952c" data-source="The block is treated as a single statement." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Блок обрабатывается как один оператор.</sentencetext></span>&nbsp;&nbsp;<span id="mt23" class="sentence" data-guid="c7a2ebf636ee0ecab6b9a39275a1890f" data-source="Also, the function itself consists of a block of statements surrounded by braces." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Кроме того, сама функция состоит из блока операторов, заключенных в фигурные скобки.</sentencetext></span>&nbsp;&nbsp;<span id="mt24" class="sentence" data-guid="f8df48048d686288bc5b3694c0819069" data-source="The statements below the function are outside of the block and are therefore not part of the function definition." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Операторы под функцией находятся вне блока и, следовательно, не являются частью определения функции.</sentencetext></span>&nbsp;&nbsp;</p>
+<div id="code-snippet-2" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>JavaScript</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Копировать в буфер обмена." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode(&#39;CodeSnippetContainerCode_8ff14cd2-ca24-4c21-8b5a-f518bf6e3546&#39;);" ms.cmptyp="CodeSnippet">Копировать</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_8ff14cd2-ca24-4c21-8b5a-f518bf6e3546" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre><span style="color:Blue;">function</span> inchestometers(inches)
+   {
+   <span style="color:Blue;">if</span> (inches &lt; 0)
+      <span style="color:Blue;">return</span> -1;
+   <span style="color:Blue;">else</span>
+      {
+      <span style="color:Blue;">var</span> meters = inches / 39.37;
+      <span style="color:Blue;">return</span> meters;
+      }
+   }
+
+<span style="color:Blue;">var</span> inches = 12;
+<span style="color:Blue;">var</span> meters = inchestometers(inches);
+document.write(<span style="color:#A31515;">"the value in meters is "</span> + meters);
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</div></div></div><div><h2 class="LW_CollapsibleArea_TitleDiv"><div><a class="LW_CollapsibleArea_TitleAhref" title="" role="heading"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Комментарии</span></a><div id="Anchor_1" class="LW_CollapsibleArea_Anchor_Div"><a href="https://msdn.microsoft.com/ru-ru/library/cte3c772(v=vs.94).aspx#Anchor_1" class="LW_CollapsibleArea_Anchor_Img" title="Щелкните правой кнопкой мыши, чтобы скопировать ссылку на этот раздел и поделиться ей"></a></div><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr"></div></div></h2><div class="sectionblock"><div class="section"><p><span id="mt26" class="sentence" data-guid="711e6bd8b0d08e0f73900edfe7a462f0" data-source="A single-line JavaScript comment begins with a pair of forward slashes (//)." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Комментарий JavaScript, состоящий из одной строки, начинается с двух знаков косой черты (//).</sentencetext></span>&nbsp;&nbsp;<span id="mt27" class="sentence" data-guid="859e832595c5ec2f118c48aea70e0f39" data-source="Here is an example of a single line comment." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Ниже приведен пример комментария, состоящего из одной строки.</sentencetext></span>&nbsp;&nbsp;</p>
+<div id="code-snippet-3" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>JavaScript</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Копировать в буфер обмена." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode(&#39;CodeSnippetContainerCode_b58c8d5a-a1f7-4602-8c92-9035d5804bb3&#39;);" ms.cmptyp="CodeSnippet">Копировать</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_b58c8d5a-a1f7-4602-8c92-9035d5804bb3" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre><span style="color:Blue;">var</span> aGoodIdea = <span style="color:#A31515;">"Comment your code thoroughly."</span>; <span style="color:Green;">// This is a single-line comment.</span>
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+<p><span id="mt28" class="sentence" data-guid="0d2aa9780a91ee33a8b80efdd2e1bc7e" data-source="A multiline JavaScript comment begins with a forward slash and asterisk (/*), and ends with the reverse (*/)." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Комментарий JavaScript, состоящий из нескольких строк, начинается с косой черты и звездочки (/*), а заканчивается этими же знаками, стоящими в обратном порядке (*/).</sentencetext></span></p>
+<div id="code-snippet-4" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>JavaScript</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Копировать в буфер обмена." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode(&#39;CodeSnippetContainerCode_8a373a5e-9422-488a-baac-e4d9dd9cc6c8&#39;);" ms.cmptyp="CodeSnippet">Копировать</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_8a373a5e-9422-488a-baac-e4d9dd9cc6c8" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre><span style="color:Green;">/*
+This is a multiline comment that explains the preceding code statement.
+
+The statement assigns a value to the aGoodIdea variable. The value, 
+which is contained between the quote marks, is called a literal. A 
+literal explicitly and directly contains information; it does not 
+refer to the information indirectly. The quote marks are not part 
+of the literal.
+*/</span>
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+<div class="alert"><div class="contentTableWrapper"><table summary="table"><tbody><tr><th align="left" scope="col"><span><img id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-note" alt="System_CAPS_note" src="./Написание кода JavaScript_files/IC101471.jpeg" title="System_CAPS_note" xmlns=""></span><span class="alertTitle">Примечание </span></th></tr><tr><td><p><span id="mt29" class="sentence" data-guid="d0dc151af81e7428085a7bd1fedbd840" data-source="If you attempt to embed one multiline comment within another, JavaScript interprets the resulting multiline comment in an unexpected way." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">При попытке вставить один многострочный комментарий внутрь другого результат будет обработан в JavaScript неожиданным образом.</sentencetext></span>&nbsp;&nbsp;<span id="mt30" class="sentence" data-guid="659726742e99f6d71287300872903a2b" data-source="The */ that marks the end of the embedded multiline comment is interpreted as the end of the whole multiline comment." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Знаки */, означающие конец внутреннего многострочного комментария, будут считаться концом всего многострочного комментария.</sentencetext></span>&nbsp;&nbsp;<span id="mt31" class="sentence" data-guid="5085a91e47afcf629f6652c13e069a10" data-source="This means that the text that follows the embedded multiline comment will not be commented out; instead, it will be interpreted as JavaScript code, and will generate syntax errors." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Это означает, что текст, следующий за вложенным многострочным комментарием, не будет считаться комментарием; вместо этого он будет интерпретироваться как код JavaScript и вызовет синтаксические ошибки.</sentencetext></span>&nbsp;&nbsp;</p></td></tr></tbody></table></div></div><p><span id="mt32" class="sentence" data-guid="60860a8e06798c4df9134b7281665298" data-source="It is recommended that you write all your comments as blocks of single-line comments." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Рекомендуется писать все комментарии как блоки однострочных комментариев.</sentencetext></span>&nbsp;&nbsp;<span id="mt33" class="sentence" data-guid="b6ea39a3d89cd7a0e376c1201b275837" data-source="This allows you to comment out large segments of code with a multiline comment later." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Это позволяет переносить в комментарии крупные сегменты кода с помощью многострочных комментариев на более поздних этапах.</sentencetext></span>&nbsp;&nbsp;</p>
+<div id="code-snippet-5" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>JavaScript</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Копировать в буфер обмена." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode(&#39;CodeSnippetContainerCode_3b2eaded-20ca-4c95-b3df-38c6b80e5655&#39;);" ms.cmptyp="CodeSnippet">Копировать</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_3b2eaded-20ca-4c95-b3df-38c6b80e5655" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre><span style="color:Green;">// This is another multiline comment, written as a series of single-line comments.</span>
+<span style="color:Green;">// After the statement is executed, you can refer to the content of the </span>
+<span style="color:Green;">// aGoodIdea variable by using its name.</span>
+<span style="color:Blue;">var</span> extendedIdea = aGoodIdea + <span style="color:#A31515;">" You never know when you'll have to figure out what it does."</span>;
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</div></div></div><div><h2 class="LW_CollapsibleArea_TitleDiv"><div><a class="LW_CollapsibleArea_TitleAhref" title="" role="heading"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Присваивания и равенство</span></a><div id="Anchor_2" class="LW_CollapsibleArea_Anchor_Div"><a href="https://msdn.microsoft.com/ru-ru/library/cte3c772(v=vs.94).aspx#Anchor_2" class="LW_CollapsibleArea_Anchor_Img" title="Щелкните правой кнопкой мыши, чтобы скопировать ссылку на этот раздел и поделиться ей"></a></div><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr"></div></div></h2><div class="sectionblock"><div class="section"><p><span id="mt35" class="sentence" data-guid="d9d06eeda91582a7d2a12c6de84956c2" data-source="The equal sign (=) is used in JavaScript statements to assign values to variables: it is the assignment operator." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Знак равенства (=) используется в операторах JavaScript для присваивания значений переменным&nbsp;— это оператор присваивания.</sentencetext></span>&nbsp;&nbsp;<span id="mt36" class="sentence" data-guid="8611d69bbe6dc1c46d481221ac664a70" data-source="The left hand operand of the = operator is always an Lvalue." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Левый операнд оператора "=" всегда является левосторонним значением.</sentencetext></span>&nbsp;&nbsp;<span id="mt37" class="sentence" data-guid="a463dad0a8d6428f1a58564d0d9260ac" data-source="Examples of Lvalues are:" xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Примеры левосторонних значений:</sentencetext></span>&nbsp;&nbsp;</p><ul class="unordered"><li><p><span id="mt38" class="sentence" data-guid="0913a2125689251f0ceea28f6ae65c7c" data-source="variables," xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">переменные;</sentencetext></span></p></li><li><p><span id="mt39" class="sentence" data-guid="b4ff56531a8f89c09a294ace0ce78a2c" data-source="array elements," xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">элементы массива;</sentencetext></span></p></li><li><p><span id="mt40" class="sentence" data-guid="85dcf646b8de11f0172a1cf2ff8a9e99" data-source="object properties." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">свойства объекта.</sentencetext></span></p></li></ul><p><span id="mt41" class="sentence" data-guid="e2a332c3af0260c5d3bfbdf0131d0393" data-source="The right operand of the = operator is always an Rvalue." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Правый операнд оператора "=" всегда является правосторонним значением.</sentencetext></span>&nbsp;&nbsp;<span id="mt42" class="sentence" data-guid="0ed2963780bd736f8d825db0039c42d9" data-source="Rvalues can be an arbitrary value of any type, including the value of an expression." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Правосторонние значения могут быть произвольным значением любого типа, включая значение выражения.</sentencetext></span>&nbsp;&nbsp;<span id="mt43" class="sentence" data-guid="4d026f96c0dba7f316a53d42c9a9b696" data-source="Here is an example of a JavaScript assignment statement." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Ниже приведен пример оператора присваивания в JavaScript.</sentencetext></span>&nbsp;&nbsp;</p>
+<div id="code-snippet-6" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>JavaScript</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Копировать в буфер обмена." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode(&#39;CodeSnippetContainerCode_05e347f2-57e0-41eb-943e-6e53e78d2d0b&#39;);" ms.cmptyp="CodeSnippet">Копировать</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_05e347f2-57e0-41eb-943e-6e53e78d2d0b" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre><span style="color:Blue;">var</span> anInteger = 3;
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+<p><span id="mt44" class="sentence" data-guid="7f8caed362ab9e2745a61b7ccb2eafe0" data-source="The JavaScript compiler interprets this statement as meaning: &quot;Assign the value 3 to the variable &lt;strong&gt;anInteger&lt;/strong&gt;,&quot; or &quot;&lt;strong&gt;anInteger&lt;/strong&gt; takes the value 3.&quot; " xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Компилятор JavaScript интерпретирует этот оператор следующим образом: "присвоить значение 3 переменной <strong xmlns="http://www.w3.org/1999/xhtml">anInteger</strong>" или "переменная <strong xmlns="http://www.w3.org/1999/xhtml">anInteger</strong> принимает значение 3". </sentencetext></span></p><p><span id="mt45" class="sentence" data-guid="1cf6c8511482686f2d83598e75dadf5c" data-source="Be certain you understand the difference between the = operator (assignment) and the == operator (equality)." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Обратите внимание на разницу между оператором "=" (присваивание) и оператором "==" (равенство).</sentencetext></span>&nbsp;&nbsp;<span id="mt46" class="sentence" data-guid="2723e094a39e0ebb364344ee6f646f25" data-source="When you want to compare two values to find out if they are equal, use two equals signs (==)." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Если требуется сравнить два значения, чтобы определить, равны ли они, используйте два знака равенства (==).</sentencetext></span>&nbsp;&nbsp;<span id="mt47" class="sentence" data-guid="386fbdcf65b8d1661cd34af93c17d830" data-source="This is discussed in detail in &lt;span class=&quot;mtpsTagOuterHtml&quot; &gt;&lt;span&gt;Controlling Program Flow&lt;/span&gt;&lt;/span&gt;." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Подробно это обсуждается в разделе <a href="https://msdn.microsoft.com/ru-ru/library/kw1tezhk(v=vs.94).aspx">Управление выполнением программ</a>.</sentencetext></span>&nbsp;&nbsp;</p></div></div></div><div><h2 class="LW_CollapsibleArea_TitleDiv"><div><a class="LW_CollapsibleArea_TitleAhref" title="" role="heading"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Выражения</span></a><div id="Anchor_3" class="LW_CollapsibleArea_Anchor_Div"><a href="https://msdn.microsoft.com/ru-ru/library/cte3c772(v=vs.94).aspx#Anchor_3" class="LW_CollapsibleArea_Anchor_Img" title="Щелкните правой кнопкой мыши, чтобы скопировать ссылку на этот раздел и поделиться ей"></a></div><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr"></div></div></h2><div class="sectionblock"><div class="section"><p><span id="mt49" class="sentence" data-guid="98e73c5b462142741ca1a0c7bb83cffb" data-source="A JavaScript expression value can be of any valid JavaScript type - a number, a string, an object, and so on." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Значение выражения JavaScript может быть любого допустимого типа JavaScript&nbsp;— число, строка, объект и т. д.</sentencetext></span>&nbsp;&nbsp;<span id="mt50" class="sentence" data-guid="0cdd9ef57cfe0464fdcd680edc76079b" data-source="The simplest expressions are literals." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Простейшими выражениями являются литералы.</sentencetext></span>&nbsp;&nbsp;<span id="mt51" class="sentence" data-guid="2fbf4787707e04288a96296e2fa93dd2" data-source="Here are some examples of JavaScript literal expressions." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Ниже приведены некоторые примеры литеральных выражений JavaScript.</sentencetext></span>&nbsp;&nbsp;</p>
+<div id="code-snippet-7" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>JavaScript</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Копировать в буфер обмена." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode(&#39;CodeSnippetContainerCode_a395eec1-9e2f-4d7d-8747-406da3503c75&#39;);" ms.cmptyp="CodeSnippet">Копировать</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_a395eec1-9e2f-4d7d-8747-406da3503c75" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>3.9                       <span style="color:Green;">// numeric literal</span>
+<span style="color:#A31515;">"Hello!"</span>                  <span style="color:Green;">// string literal</span>
+<span style="color:Blue;">false</span>                     <span style="color:Green;">// boolean literal</span>
+<span style="color:Blue;">null</span>                      <span style="color:Green;">// literal null value</span>
+{x:1, y:2}                <span style="color:Green;">// Object literal</span>
+[1,2,3]                   <span style="color:Green;">// Array literal</span>
+<span style="color:Blue;">function</span>(x){<span style="color:Blue;">return</span> x*x;}  <span style="color:Green;">// function literal</span>
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+<p><span id="mt52" class="sentence" data-guid="c8a06c24d48ed2ecc46cb9cd98facdf0" data-source="More complicated expressions can contain variables, function calls, and other expressions." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Более сложные выражения могут содержать переменные, вызовы функций и другие выражения.</sentencetext></span>&nbsp;&nbsp;<span id="mt53" class="sentence" data-guid="70fc27504160558c61fead4c6b7c5452" data-source="You can combine expressions to create complex expressions using operators." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Для объединения выражений и создания сложных выражений можно использовать операторы.</sentencetext></span>&nbsp;&nbsp;<span id="mt54" class="sentence" data-guid="b9c72a490fa31bac3ee78bc532e18f26" data-source="Examples of operators are: &lt;span class=&quot;code&quot;&gt;+&lt;/span&gt; (addition), &lt;span class=&quot;code&quot;&gt;-&lt;/span&gt; (subtraction), &lt;span class=&quot;code&quot;&gt;*&lt;/span&gt; (multiplication), and &lt;span class=&quot;code&quot;&gt;/&lt;/span&gt; (division)." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Примеры операторов: <span class="code" xmlns="http://www.w3.org/1999/xhtml">+</span> (сложение), <span class="code" xmlns="http://www.w3.org/1999/xhtml">-</span> (вычитание), <span class="code" xmlns="http://www.w3.org/1999/xhtml">*</span> (умножение) и <span class="code" xmlns="http://www.w3.org/1999/xhtml">/</span> (деление).</sentencetext></span>&nbsp;&nbsp;</p><p><span id="mt55" class="sentence" data-guid="1d3de9e116f0d36f8bb552a3007d2f14" data-source="Here are some examples of JavaScript complex expressions." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Ниже приведены некоторые примеры сложных выражений JavaScript.</sentencetext></span></p>
+<div id="code-snippet-8" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>JavaScript</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Копировать в буфер обмена." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode(&#39;CodeSnippetContainerCode_b0c02f5e-0788-4e1a-a1a8-0e7534ce57b5&#39;);" ms.cmptyp="CodeSnippet">Копировать</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_b0c02f5e-0788-4e1a-a1a8-0e7534ce57b5" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre><span style="color:Blue;">var</span> anExpression = 3 * (4 / 5) + 6;
+<span style="color:Blue;">var</span> aSecondExpression = Math.PI * radius * radius;
+<span style="color:Blue;">var</span> aThirdExpression = aSecondExpression + <span style="color:#A31515;">"%"</span> + anExpression;
+<span style="color:Blue;">var</span> aFourthExpression = <span style="color:#A31515;">"("</span> + aSecondExpression + <span style="color:#A31515;">") % ("</span> + anExpression + <span style="color:#A31515;">")"</span>;
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</div></div></div></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="libraryMemberFilter">
+    <div class="filterContainer">
+        <span>Показ:</span>
+        <label>
+            <input type="checkbox" class="libraryFilterInherited" checked="checked" value="Inherit">Унаследовано
+        </label>
+        <label>
+            <input type="checkbox" class="libraryFilterProtected" checked="checked" value="Protected">Защищен
+        </label>
+    </div>
+</div>
+    
+<input type="hidden" id="libraryMemberFilterEmptyWarning" value="Для текущих настроек фильтра нет доступных членов.">
+
+
+
+    </div>
+<div id="rightNavigationMenu" ms.cmpgrp="right nav">
+    <div id="mobileButtons">
+        
+    </div>
+    <div id="navMain">
+        <div id="closeNavigation">
+            <a class="tocCloseSmall" id="closeButton"></a>
+        </div>
+        <div id="navigationButtons">
+            <a id="isd_print" href="https://msdn.microsoft.com/ru-ru/library/cte3c772(d=printer,v=vs.94).aspx" rel="nofollow"><ins class="print"></ins>Печать </a>
+            <a id="isdShare" href="https://msdn.microsoft.com/ru-ru/library/cte3c772(v=vs.94).aspx#" role="button" aria-expanded="false">
+                <ins class="share"></ins>Общий доступ
+            </a>
+            <div id="socials" style="display: none">
+                <a class="isdFacebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmsdn.microsoft.com%2Fru-ru%2Flibrary%2Fcte3c772(v%3Dvs.94).aspx" aria-label="Поделиться в Facebook">
+                    <ins class="facebook"></ins>
+                </a>
+                <a class="isdTwitter" href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fmsdn.microsoft.com%2Fru-ru%2Flibrary%2Fcte3c772(v%3Dvs.94).aspx&amp;text=%D0%9D%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BA%D0%BE%D0%B4%D0%B0%20JavaScript&amp;tw_p=tweetbutton&amp;url=https%3A%2F%2Fmsdn.microsoft.com%2Fru-ru%2Flibrary%2Fcte3c772(v%3Dvs.94).aspx" aria-label="Поделиться в Twitter">
+                    <ins class="twitter"></ins>
+                </a>
+                <a class="isdGooglePlus" href="https://plus.google.com/share?url=https%3A%2F%2Fmsdn.microsoft.com%2Fru-ru%2Flibrary%2Fcte3c772(v%3Dvs.94).aspx" aria-label="Поделиться в Google+">
+                    <ins class="googlePlus"></ins>
+                </a>
+            </div>
+        </div>
+        <div id="indoc_toc" style="" ms.cmpgrp="indoc toc">
+            <div id="indoc_title">СОДЕРЖАНИЕ СТАТЬИ</div>
+            <ul id="indoc_toclist"><li data-index="0" class="active"><a href="https://msdn.microsoft.com/ru-ru/library/cte3c772(v=vs.94).aspx#%D0%9E%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%8B">Операторы</a></li><li data-index="1"><a href="https://msdn.microsoft.com/ru-ru/library/cte3c772(v=vs.94).aspx#%D0%9A%D0%BE%D0%BC%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%80%D0%B8%D0%B8">Комментарии</a></li><li data-index="2"><a href="https://msdn.microsoft.com/ru-ru/library/cte3c772(v=vs.94).aspx#%D0%9F%D1%80%D0%B8%D1%81%D0%B2%D0%B0%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%B8%20%D1%80%D0%B0%D0%B2%D0%B5%D0%BD%D1%81%D1%82%D0%B2%D0%BE">Присваивания и равенство</a></li><li data-index="3"><a href="https://msdn.microsoft.com/ru-ru/library/cte3c772(v=vs.94).aspx#%D0%92%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F">Выражения</a></li></ul>
+        </div>
+    </div>
+</div>
+<div id="rightNavigationMenuThumbnail" class="rightNavigationMenuThumbnail">
+</div>
+
+
+
+
+
+        </div>
+        <div class="clear"></div>
+
+        
+
+<input name="__RequestVerificationToken" type="hidden" value="Ce1gvpCNdsNwoAqtIz42zHSZEiYE14iAWg4TTeLhxDaVmDMuSsrtuNwMeRR5GxkQvGCFs8LNWmq3F3lOKXELgEG_EwU1">
+<input id="ratingValueSubmitUrl" type="hidden" value="https://msdn.microsoft.com/ru-ru/library/feedback/rate/cte3c772(v=vs.94).aspx">
+<input id="ratingAdditionalSubmitUrl" type="hidden" value="https://msdn.microsoft.com/ru-ru/library/feedback/additional/cte3c772(v=vs.94).aspx">
+<input id="isTopicRated" type="hidden" value="false">
+
+
+
+
+    <div id="lib-footer">
+        
+
+    
+    <link type="text/css" rel="stylesheet">
+    
+        
+    <div id="ux-footer" class="" style="" dir="ltr" ms.pgarea="footer">
+
+
+    <div id="standardRatingBefore" class="clear stdr-container-before"></div>
+    <div id="standardRating" class="stdr-container" ms.pgarea="body" style="width: 1903px; margin-left: 0px; display: block;">
+        <div class="stdr-close" style="display: none;"></div>
+        <div class="stdr-vote stdr-content">
+            <div class="stdr-content">
+                <span class="stdr-votetitle">Была ли эта страница полезной?</span>
+                <button class="stdr-yes" aria-label="Да, эта страница была полезной">Да</button>
+                <button class="stdr-no" aria-label="Нет, эта страница не была полезной">Нет</button>
+                <input id="s_ratingValue" type="hidden" value="">
+            </div>
+        </div>
+        <div class="stdr-feedback" style="display: none">
+            <div class="stdr-form">
+                <div class="stdr-fieldtitle">Дополнительный отзыв?</div>
+                <textarea class="stdr-detail" rows="6" maxlength="1500"></textarea>
+                <div>
+                    <span class="stdr-count"><span class="stdr-charcnt">1500</span> символов осталось</span>
+                    <div class="stdr-buttons">
+                        <button class="stdr-provide" aria-label="Отправить дополнительный отзыв">Отправить</button>
+                        <button class="stdr-skip" aria-label="Пропустить дополнительный отзыв">Пропустить</button>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="stdr-thanks" style="display: none">
+            <div class="stdr-content">
+                <span class="stdr-thankyou">Спасибо!</span>
+                <span class="stdr-appreciate">Благодарим за отзыв. Ваше мнение очень важно для нас.</span>
+            </div>
+        </div>
+
+        
+        <div id="contentFeedbackQAContainer" style="display: none;"></div>
+    </div>
+    <div id="standardRatingPlaceholder" style="display: none"></div>
+    
+
+        <footer class="top" role="navigation" aria-label="footer">
+            <div data-fragmentname="LeftLinks" id="Fragment_LeftLinks" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <h4 class="linkListTitle">Центры разработки</h4>
+    <ul class="links">
+      <li>
+        <a href="https://dev.windows.com/" id="LeftLinks_2148_1" class="windowsBlue" xmlns="http://www.w3.org/1999/xhtml">Windows</a>
+      </li>
+      <li>
+        <a href="https://dev.office.com/" id="LeftLinks_2148_3" class="office" xmlns="http://www.w3.org/1999/xhtml">Office</a>
+      </li>
+      <li>
+        <a href="https://msdn.microsoft.com/vstudio" id="LeftLinks_2148_4" class="visualStudio" xmlns="http://www.w3.org/1999/xhtml">Visual Studio</a>
+      </li>
+      <li>
+        <a href="https://azure.microsoft.com/ru-ru/documentation/" target="_blank" id="LeftLinks_2148_12" xmlns="http://www.w3.org/1999/xhtml">Microsoft Azure</a>
+      </li>
+      <li>
+        <a href="https://msdn.microsoft.com/developer-centers-msdn" id="LeftLinks_2148_5" xmlns="http://www.w3.org/1999/xhtml">Дополнительно...</a>
+      </li>
+    </ul>
+  </div>
+</div>
+            <div id="rightLinks">
+                <div data-fragmentname="CenterLinks1" id="Fragment_CenterLinks1" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <h4 class="linkListTitle">Обучение</h4>
+    <ul class="links">
+      <li>
+        <a href="https://mva.microsoft.com/" id="CenterLinks1_2151_4" xmlns="http://www.w3.org/1999/xhtml">Microsoft Virtual Academy</a>
+      </li>
+      <li>
+        <a href="https://channel9.msdn.com/browse/series?lang=ru" id="CenterLinks1_2151_5" xmlns="http://www.w3.org/1999/xhtml">Канал Channel 9</a>
+      </li>
+      <li>
+        <a href="https://msdn.microsoft.com/ru-ru/magazine/default.aspx" id="CenterLinks1_2151_7" xmlns="http://www.w3.org/1999/xhtml">Журнал MSDN</a>
+      </li>
+    </ul>
+  </div>
+</div>
+                <div data-fragmentname="CenterLinks2" id="Fragment_CenterLinks2" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <h4 class="linkListTitle">Сообщество</h4>
+    <ul class="links">
+      <li>
+        <a href="https://blogs.msdn.com/b/rudevnews/" id="CenterLinks2_2151_17" xmlns="http://www.w3.org/1999/xhtml">Новости</a>
+      </li>
+      <li>
+        <a href="https://social.msdn.microsoft.com/forums/ru-ru/home" id="CenterLinks2_2151_8" xmlns="http://www.w3.org/1999/xhtml">Форумы</a>
+      </li>
+      <li>
+        <a href="https://msdn.microsoft.com/ru-ru/jj129558" id="CenterLinks2_2151_9" xmlns="http://www.w3.org/1999/xhtml">Блоги</a>
+      </li>
+      <li>
+        <a href="https://www.codeplex.com/" id="CenterLinks2_2151_10" xmlns="http://www.w3.org/1999/xhtml">Codeplex</a>
+      </li>
+    </ul>
+  </div>
+</div>
+                <div data-fragmentname="CenterLinks3" id="Fragment_CenterLinks3" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <h4 class="linkListTitle">Свяжитесь с нами</h4>
+    <ul class="links">
+      <li>
+        <a href="https://msdn.microsoft.com/hh361695" id="CenterLinks3_2151_11" xmlns="http://www.w3.org/1999/xhtml">Самостоятельно</a>
+      </li>
+    </ul>
+  </div>
+</div>
+                <div data-fragmentname="CenterLinks4" id="Fragment_CenterLinks4" xmlns="http://www.w3.org/1999/xhtml" class="nth-child-4n">
+  
+  <div class="linkList">
+    <h4 class="linkListTitle">Программы</h4>
+    <ul class="links">
+      <li>
+        <a href="https://bizspark.microsoft.com/" id="CenterLinks4_2151_13" xmlns="http://www.w3.org/1999/xhtml">BizSpark (для стартапов)</a>
+      </li>
+      <li>
+        <a href="https://imagine.microsoft.com/" id="CenterLinks4_2151_23" xmlns="http://www.w3.org/1999/xhtml">Microsoft Imagine (for students)</a>
+      </li>
+    </ul>
+  </div>
+</div>
+            </div>
+        </footer>
+
+        <footer class="bottom" role="contentinfo">
+            <span class="localeContainer">
+                
+    <form class="selectLocale" id="selectLocaleForm" action="https://msdn.microsoft.com/ru-ru/selectlocale-dmc">
+        <input type="hidden" name="fromPage" value="https%3a%2f%2fmsdn.microsoft.com%2fru-ru%2flibrary%2fcte3c772(v%3dvs.94).aspx">
+        <a href="https://msdn.microsoft.com/ru-ru/library/cte3c772(v=vs.94).aspx#" onclick="$(&#39;#selectLocaleForm&#39;).submit();return false;" title="Измените язык">Россия (Pусский)</a>
+    </form>
+
+
+            </span>
+
+            <div data-fragmentname="BottomLinks" id="Fragment_BottomLinks" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <ul class="links horizontal">
+      <li>
+        <a href="https://msdn.microsoft.com/newsletter.aspx" id="BottomLinks_2148_7" xmlns="http://www.w3.org/1999/xhtml">Информационный бюллетень</a>
+      </li>
+      <li>
+        <a href="https://msdn.microsoft.com/dn529288" id="BottomLinks_2148_8" xmlns="http://www.w3.org/1999/xhtml" data-mscc-ic="false">Конфиденциальность и файлы cookie</a>
+      </li>
+      <li>
+        <a href="https://msdn.microsoft.com/cc300389" id="BottomLinks_2148_9" xmlns="http://www.w3.org/1999/xhtml" data-mscc-ic="false">Условия использования</a>
+      </li>
+      <li>
+        <a href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/" id="BottomLinks_2148_10" xmlns="http://www.w3.org/1999/xhtml" data-mscc-ic="false">Товарные знаки</a>
+      </li>
+    </ul>
+  </div>
+</div>
+            <span class="logoLegal">
+                <span class="logoSpan clip67x13" role="img" tabindex="0" aria-label="microsoft logo">
+                    <img alt="logo" class="logo" src="./Написание кода JavaScript_files/HeaderFooterSprite.png">
+                </span>
+                <span class="copyright">© 2018 Microsoft</span>
+            </span>
+        </footer>
+    </div>
+    
+
+    </div>
+
+
+        <div class="footerPrintView">
+            <div class="footerCopyrightPrintView">© 2018 Microsoft</div>
+        </div>
+
+        
+        
+
+        
+        
+        
+
+    <input id="tocPaddingPerLevel" type="hidden" value="17">
+
+
+
+        <input id="MtpsDevice" type="hidden" value="Default">
+
+
+<!--[CDATA[ Third party scripts and code linked to or referenced from this website are licensed to you by the parties that own such code, not by Microsoft.  See ASP.NET Ajax CDN Terms of Use – http://www.asp.net/ajaxlibrary/CDN.ashx. ]]-->
+
+        
+        
+        
+            
+        
+
+<!--[CDATA[ WebTrends view model not available or IncludeLegacyWebTrendsScriptInGlobal feature flag is off]]-->
+ 
+        
+
+<div id="globalRequestVerification">
+    <input name="__RequestVerificationToken" type="hidden" value="eMs_ejTlfQ9Xn4S9M38AkfdxxTdYnbWLSornLUhv_YZ02ttWaa7jqf-eEXXKcXNqVlruBO8hE7gYIY_MeQ-n-7l7HDs1">
+</div>
+
+
+    </div>
+
+    
+        
+
+    
+
+    
+<script type="text/javascript" class="mtps-injected">
+/*<![CDATA[*/
+(function(window,document){"use strict";function preload(scripts){for(var result=[],script,e,i=0;i<scripts.length;i++)script=scripts[i],script.hasOwnProperty("url")&&(e=document.createElement("script"),e.src=script.url,script.throwaway=e),result.push(script);return result}function inject(scripts,index){var script,elem;if(index>=scripts.length){delete mtps.injectScripts;return}script=scripts[index];elem=document.createElement("script");elem.className="mtps-injected";elem.async=!1;var isLoaded=!1,timeoutId=0,injectNextFnName="",injectNext=elem.onerror=function(){isLoaded||(isLoaded=!0,inject(scripts,index+1),window.clearTimeout(timeoutId),elem.onload=elem.onerror=elem.onreadystatechange=null,injectNextFnName&&delete mtps[injectNextFnName],elem.removeEventListener&&elem.removeEventListener("load",injectNext,!1))};elem.addEventListener?elem.addEventListener("load",injectNext,!1):elem.readyState==="uninitialized"?elem.onreadystatechange=function(){(this.readyState==="loaded"||this.readyState==="complete")&&injectNext()}:elem.onload=injectNext;script.hasOwnProperty("url")?(timeoutId=window.setTimeout(injectNext,12e4),elem.src=script.url):(injectNextFnName="_injectNextScript_"+index,mtps[injectNextFnName]=injectNext,timeoutId=window.setTimeout(injectNext,2e3),elem.text="try {\n"+script.txt+"\n} finally { MTPS."+injectNextFnName+" && MTPS."+injectNextFnName+"(); }");parent.appendChild(elem)}var mtps=window.MTPS||(window.MTPS={}),parent=document.getElementsByTagName("head")[0];mtps.injectScripts=function(scripts){inject(preload(scripts),0)}})(window,document);
+MTPS.injectScripts([
+	{ txt: "/**/\r\n(window.MTPS || (window.MTPS = {})).cdnDomains || (window.MTPS.cdnDomains = { \r\n\t\"image\": \"https://i-msdn.sec.s-msft.com\", \r\n\t\"js\": \"https://i2-msdn.sec.s-msft.com\", \r\n\t\"css\": \"https://i-msdn.sec.s-msft.com\", \r\n\t\"ttf\": \"https://i-msdn.sec.s-msft.com\"\r\n});\r\n/**/" },
+	{ txt: "//\n\n        window.appInsightsId = \u00275eb1b2eb-c47a-497a-a7ac-a1c230b2882f\u0027;\n        //" },
+	{ url: "https://i2-msdn.sec.s-msft.com/Combined.js?resources=0:Utilities,1:Layout,2:Header,3:Breadcrumbs,4:LibraryRightNavigationMenu,4:PrintExportButton,5:StandardRating,2:Footer,0:Topic,3:ResponsiveSupport,6:JSLLRecord,0:AppInsightsPerf,3:ResponsiveToc,0:ABTestControl;/Areas/Epx/Content/Scripts:0,/Areas/Epx/Themes/Base/Content:1,/Areas/Centers/Themes/StandardDevCenter/Content:2,/Areas/Library/Content:3,/Areas/Library/Themes/Base/Content:4,/Areas/Global/Content:5,/Areas/Centers/Themes/Base/Content:6\u0026amp;hashKey=FEAFFC2ACF561ABFFA5D98C18CC15A7B\u0026amp;v=0DA6C2DCB7C612307024900FF9FDC1FF" },
+	{ url: "https://uhf.microsoft.com/mscc/statics/mscc-0.4.0.min.js" },
+	{ url: "https://i2-msdn.sec.s-msft.com/Areas/Epx/Themes/Base/Content/SearchBox.js" },
+	{ url: "https://i1.services.social.microsoft.com/search/Widgets/SearchBox.jss?boxid=HeaderSearchTextBox\u0026btnid=HeaderSearchButton\u0026minimumTermLength=2\u0026pgArea=header\u0026brand=Msdn\u0026loc=ru-ru\u0026focusOnInit=false\u0026emptyWatermark=true\u0026searchButtonTooltip=Поиск в MSDN" },
+	{ url: "https://i2-msdn.sec.s-msft.com/Combined.js?resources=0:JumpRedirect,1:CmpgrpForHeader;/Areas/Epx/Themes/Base/Content:0,/Areas/Library/Content:1\u0026amp;hashKey=592B8C72332175725588AF565857BA77\u0026amp;v=0DA6C2DCB7C612307024900FF9FDC1FF" },
+	{ txt: "//\n    MTPS = window.MTPS || {};\n    MTPS.Translation = window.MTPS.Translation || {};\n\n    MTPS.Translation.TranslationType =  0;\n    \n    \n        \n        MTPS.Translation.EditorLink = {\n            includeEditor : 0,\n            editLink: \"https://msdn.microsoft.com/ru-ru/library/translation/edit/cte3c772(v=vs.94).aspx\",\n            editLinkText: \"Предложите более удачный вариант перевода\"\n        };\n        \n    //" },
+	{ url: "https://i2-msdn.sec.s-msft.com/Combined.js?resources=0:jquery.popup,0:Translator;/Areas/Library/Content:0\u0026amp;hashKey=787741324D08072D5277F0F5F7FABA13\u0026amp;v=0DA6C2DCB7C612307024900FF9FDC1FF" },
+	{ txt: "MTPS = window.MTPS || {}; MTPS.LocalizedStrings = window.MTPS.LocalizedStrings || {}; MTPS.LocalizedStrings.ExpandButtonTooltip = \u0027Развернуть\u0027; MTPS.LocalizedStrings.CollapseButtonTooltip = \u0027Свернуть\u0027; MTPS.LocalizedStrings.EnhancedExpandTooltip = \u0027Щелкните, чтобы развернуть. Щелкните дважды, чтобы развернуть все.\u0027; MTPS.LocalizedStrings.EnhancedCollapseTooltip = \u0027Щелкните, чтобы свернуть. Щелкните дважды, чтобы свернуть все.\u0027; MTPS.LocalizedStrings.ExpandAllButtonTooltip = \u0027Развернуть все\u0027; MTPS.LocalizedStrings.CollapseAllButtonTooltip = \u0027Свернуть все\u0027;" },
+	{ url: "https://i2-msdn.sec.s-msft.com/Combined.js?resources=0:LibraryMemberFilter,1:Toc_Fixed,1:CodeSnippet,1:TopicNotInScope,1:VersionSelector,1:SurveyBroker;/Areas/Library/Content:0,/Areas/Epx/Content/Scripts:1\u0026amp;hashKey=D8D1FFAA6CA68460B7EFA5923975CA44\u0026amp;v=0DA6C2DCB7C612307024900FF9FDC1FF" },
+	{ txt: "$(document).ready(function() {\n        try {\n            var token = $(\"#globalRequestVerification input[name=\u0027__RequestVerificationToken\u0027]\").clone();\n            $(\"#siteFeedbackForm\").append(token);\n        } catch(err) {\n            \n        }\n    });" }
+]);
+
+/*]]>*/
+</script>
+
+<div id="overlayMask"></div><div id="popup-loading0" class="popup-loading" style="display: none; z-index: 210; width: auto; height: auto;">loading...</div><div id="popup0" class="MTPopup" style="display: none; z-index: 210; width: auto; height: auto;"><div class="popup-main" style="z-index: 210;"><div class="popup-inner"></div></div></div></body></html>
