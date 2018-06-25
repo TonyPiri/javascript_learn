@@ -39,8 +39,8 @@ function inchestometers(inches)
     }
 
 var inches = 120;
-var meters = inchestometers(inches)
-document.write("the value in meters = " + meters + "<br>")
+var meters = inchestometers(inches);
+document.write("the value in meters = " + meters + "<br>");
 
 
 /*
