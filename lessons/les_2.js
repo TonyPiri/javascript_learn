@@ -102,21 +102,4 @@ parseInt  -  https://msdn.microsoft.com/ru-ru/library/x53yedee(v=vs.94).aspx
 -Для явного преобразования строки в число используется функция
 
 parseFloat  -  https://msdn.microsoft.com/ru-ru/library/d5hbbd4z(v=vs.94).aspx
-
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
