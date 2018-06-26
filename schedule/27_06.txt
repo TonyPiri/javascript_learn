@@ -1,0 +1,4 @@
+1) Objects
+2) Data types
+3) Functions
+4) Inheritance(наследование)
