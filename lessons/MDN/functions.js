@@ -10,3 +10,4 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 -функция - не процедура. Она возвращает значение - либо undefined, либо знечение параметра this.
 -параметры вызова функции - это аргументы функции.
+*/
