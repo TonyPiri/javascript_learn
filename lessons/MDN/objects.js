@@ -5,15 +5,19 @@ https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Working_with_Objects
 /*
 Объекты - коллекция свойств и методов.
 Свойство - переменная, закрепленная за объектом.
--Доступ к свойствам через точечную запись.
+-Метод - функция внутри объекта.
 */
 
+//-Доступ к свойствам через точечную запись.
 var myCar = new Object();
 myCar.make = "Ford";
 myCar.model = "Mustang";
 myCar.year = 1969;
 
-//можно скобочной записью
+// -можно скобочной записью. 
+// -используется для доступа невалидных JavaScript 
+//...идентификаторов(пробел и тире, или начинается с цифры)
+//...или когда имена св-в должны быть динамически определены
 myCar["make"] = "Ford";
 myCar["model"] = "Mustang";
 myCar["year"] = 1969;
@@ -37,3 +41,14 @@ function showProps(obj, objName) {
     return
 }
 showProps(myCar, "myCar")
+
+/*
+-Неопределенные свойства имеют значение - undefined
+*/
+
+/*
+Перечисление св-в объекта:
+* for...in
+* Object.keys(obj)
+* Object.getOwnPropertyNames(obj)
+*/
